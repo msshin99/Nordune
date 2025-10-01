@@ -1,0 +1,253 @@
+article{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+article .titwrap h3{
+    font-family: var( --font-primary);
+    font-size: 40px;
+    font-weight: var(--bold);
+    line-height: 50px;
+    color: var( --color-text-primary);
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+article .titwrap .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+article .titwrap .bottom ul{
+    display: flex;
+    gap: 28px;
+}
+
+article .titwrap .bottom ul li span{
+    font-family: var( --font-primary);
+    font-size: 14px;
+    font-weight: var( --regular);
+    line-height: 22px;
+    color: var( --color-text-seconddary);
+    position: relative;
+}
+
+article .titwrap .bottom ul li span:first-child{
+    color: var(--color-text-primary);
+    margin-right: 20px;
+}
+
+article .titwrap .bottom ul li span:first-child::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    top: 3px;
+    right: -12px;
+    background: var(--color-line);
+}
+
+article .titwrap button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    background: var(--color-bg, #F4F4F4);
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: var(--regular);
+    color: var(--color-text-secondary, #767676);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+article .titwrap button:hover{
+    background: var(--color-text-primary);
+    color: #fff;
+}
+
+article .conwrap figure{
+    margin-bottom: 24px;
+}
+
+article .conwrap figure img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+article .conwrap .txt{
+    margin-bottom: 60px;
+}
+
+article .conwrap .txt span{
+    font-family: var(--font-primary);
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: var(--medium);
+    color: var(--color-text-primary);
+    margin-bottom: 14px;
+    display: inline-block;
+}
+
+article .conwrap .txt p{
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: var(--regular);
+    color: var(--color-text-seconddary);
+    margin-bottom: 18px;
+}
+
+article .btnwrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--color-line);
+    padding-top: 60px;
+}
+
+article .btnwrap a{
+    text-align: center;
+    display: block;
+    width: 120px;
+    padding: 16px;
+    background: var(--color-text-primary);
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: var(--medium);
+    color: #fff;
+}
+
+
+
+@media (max-width: 1024px){
+    
+    article{
+        padding: 60px 18px;
+    }
+
+    article .titwrap h3{
+        font-size: 32px;
+        line-height: 42px;
+        margin-top: 20px;
+        margin-bottom: 28px;
+    }
+
+    article .titwrap .bottom{
+        margin-bottom: 16px;
+    }
+
+    article .titwrap .bottom ul{
+        gap: 28px;
+    }
+
+    article .titwrap .bottom ul li span:first-child{
+        margin-right: 20px;
+    }
+
+    article .titwrap .bottom ul li span:first-child::after{
+        top: 3px;
+        right: -12px;
+    }
+
+    article .titwrap button{
+        padding: 8px 20px;
+    }
+
+    article .conwrap figure{
+        margin-bottom: 20px;
+    }
+
+    article .conwrap .txt{
+        margin-bottom: 40px;
+    }
+
+    article .conwrap .txt span{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+
+    article .conwrap .txt p{
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 14px;
+    }
+
+    article .btnwrap{
+        padding-top: 40px;
+    }
+
+}
+
+@media (max-width: 640px){
+
+    article{
+        padding: 40px 10px;
+    }
+
+    article .titwrap h3{
+        font-size: 26px;
+        line-height: 34px;
+        margin-top: 10px;
+        margin-bottom: 14px;
+    }
+
+    article .titwrap .bottom{
+        margin-bottom: 14px;
+    }
+
+    
+    article .titwrap .bottom ul{
+        gap: 20px;
+    }
+
+    article .titwrap .bottom ul li span:first-child{
+        margin-right: 12px;
+    }
+
+    article .titwrap .bottom ul li span:first-child::after{
+
+        height: 10px;
+        top: 3px;
+        right: -10px;
+    }
+
+
+    article .titwrap button{
+        padding: 6px 14px;
+        font-size: 13px;
+    }
+
+    article .conwrap figure{
+        margin-bottom: 14px;
+    }
+
+    article .conwrap .txt{
+        margin-bottom: 32px;
+    }
+
+    article .conwrap .txt span{
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    article .conwrap .txt p{
+        margin-bottom: 10px;
+    }
+
+    article .btnwrap{
+        padding-top: 30px;
+    }
+
+    article .btnwrap a{
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,502 @@
+.detail-product{
+    margin-bottom: 30px;
+}
+
+.detail-info {
+    max-width: 1776px;
+    margin: 0 auto;
+    padding: 0 24px;
+    margin-bottom: 180px;
+}
+
+.detail-info .title{
+    font-family: var( --font-primary);
+    font-size: 110px;
+    font-weight: var(--bold);
+    line-height: 120px;
+    color: var( --color-text-primary);
+    letter-spacing: -3.3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.detail-info .bottom{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.detail-info .bottom ul{
+    display: flex;
+    width: calc(100% - 576px);
+}
+
+.detail-info .bottom ul li{
+    width: 100%;
+}
+
+.detail-info .bottom ul li span{
+    font-family: var( --font-primary);
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: var(--regular);
+    color: var(--color-text-secondary, #767676);
+    margin-bottom: 2px;
+    
+}
+
+.detail-info .bottom ul li p{
+    font-family: var( --font-primary);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: var(--regular);
+    color: var( --color-text-primary, #222222);
+    
+}
+
+.detail-info .bottom .price-wrap{
+    width: 576px;
+}
+
+.detail-info .bottom .price-wrap .top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.detail-info .bottom .price-wrap .top .quantity{
+    display: flex;
+    align-items: center;
+}
+
+.detail-info .bottom .price-wrap .top .quantity button{
+    border: 1px solid var(--color-line) ;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-info .bottom .price-wrap .top .quantity input{
+    width: 52px;
+    height: 34px;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    border: 1px solid var(--color-line);
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: var(--medium);
+    color: var(--color-text-primary);
+}
+
+input[type="text" i] {
+    padding-block: 0;
+    padding-inline: 0;
+}
+
+.detail-info .bottom .price-wrap .top .total span{
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    display: inline-block;
+}
+
+
+.detail-info .bottom .price-wrap button.submit{
+    font-family: var( --font-primary);
+    font-size: 16px;
+    font-weight: var(--medium);
+    line-height: 24px;
+    color: #fff;
+    background: var(--color-text-primary);
+    width: 100%;
+    padding: 18px 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.detail-info .bottom .price-wrap button:hover{
+
+}
+
+.detail-description{
+    max-width: 1776px;
+    margin: 0 auto;
+    padding: 0 24px;
+    margin-bottom: 140px;
+}
+
+.detail-description .txt-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    gap: 40px;
+    margin-top: 18px;
+}
+
+.detail-description .txt-wrap h4.left-tit{
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: var(--medium);
+    color: var(--color-text-primary);
+    line-height: 34px; 
+    width: 640px;
+}
+
+.detail-description .txt-wrap .right-txt{
+    width: calc(100% - 600px);
+}
+
+.detail-description .txt-wrap .right-txt p{
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: var(--regular);
+    line-height: 24px;
+    color: var(--color-text-secondary, #767676);
+    margin-bottom: 20px;
+}
+
+.detail-description .txt-wrap .right-txt .profile{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.detail-description .txt-wrap .right-txt .profile figure{
+    width: 30px;
+    height: 30px;
+    background: var(--color-line);
+    border-radius: 50%;
+}
+
+.detail-description .txt-wrap .right-txt .profile figure img{
+    max-width: 100%;
+    height: auto;
+}
+
+.detail-description .txt-wrap .right-txt .profile .name{
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: var(--medium);
+    line-height: 24px;
+    color: var(--color-text-primary); 
+}
+
+.detail-description .txt-wrap .right-txt ul li{
+    position: relative;
+    border-top: 1px solid var(--color-line);
+    padding: 18px 14px;
+    cursor: pointer;
+}
+
+.detail-description .txt-wrap .right-txt ul li::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background: var(--color-text-primary);
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+    transition: height 0.5s ease;
+}
+
+.detail-description .txt-wrap .right-txt ul li:hover::before{
+    height: 100%;
+}
+
+.detail-description .txt-wrap .right-txt ul li:hover span{
+    color: #fff;
+}
+
+.detail-description .txt-wrap .right-txt ul li:hover .tit{
+    color: #fff;
+}
+
+
+.detail-description .txt-wrap .right-txt ul li:last-child{
+    border-bottom: 1px solid var(--color-line);
+}
+
+.detail-description .txt-wrap .right-txt ul li span{
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: var(--regular);
+    line-height: 24px;
+    color: var(--color-text-seconddary);
+    display: inline-block;
+}
+
+.detail-description .txt-wrap .right-txt ul li span.tit{
+    color: var(--color-text-primary);
+    width: 450px;
+}
+
+.prdtdetai{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 24px;
+    margin-bottom: 140px;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.prdtdetai p.txt{
+    font-family: var(--font-primary);
+    font-size: 46px;
+    font-style: normal;
+    font-weight: var(--bold);
+    line-height: 62px;
+    text-transform: uppercase; 
+    max-width: 740px;
+}
+
+.prdtdetai .box{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.prdtdetai .box .prdtdetai-list figure img{                              
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1024px){
+
+    .detail-product{
+        margin-bottom: 18px; 
+    }
+
+    .detail-info{
+        margin-bottom: 120px;
+        padding: 0 18px;
+    }
+
+    .detail-info .title{
+        font-size: 92px;
+        line-height: 110px;
+    }
+
+    .detail-info .bottom{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .detail-info .bottom ul{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .detail-info .bottom ul li{
+        width: calc(100% / 3);
+    }
+
+    .detail-info .bottom ul li p{
+        font-size: 15px;
+    }
+
+    .detail-info .bottom .price-wrap{
+        width: 100%;
+    }
+
+    .detail-info .bottom .price-wrap .top{
+        margin-bottom: 28px;
+    }
+
+    .detail-info .bottom .price-wrap .top .total span{
+        font-size: 18px;
+    }
+
+    .detail-info .bottom .price-wrap button.submit{
+        font-size: 15px;
+        padding: 14px 10px;
+
+    }
+
+    .detail-description{
+        padding: 0 18px;
+        margin-bottom: 100px;
+        }
+
+    .detail-description .txt-wrap{
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 12px;
+    }
+
+    .detail-description .txt-wrap h4.left-tit{
+        width: 100%;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .detail-description .txt-wrap .right-txt{
+        width: 100%;
+    }
+
+    .detail-description .txt-wrap .right-txt p{
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 16px;
+    }
+
+    .detail-description .txt-wrap .right-txt .profile{
+        gap: 4px;
+    }
+
+    .detail-description .txt-wrap .right-txt .profile figure{
+        width: 26px;
+        height: 26px;
+    }
+
+    .detail-description .txt-wrap .right-txt .profile .name{
+        font-size: 15px;
+    }
+
+    .detail-description .txt-wrap .right-txt ul li{
+        padding: 14px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .detail-description .txt-wrap .right-txt ul li span{
+        font-size: 15px;
+    }
+
+    .detail-description .txt-wrap .right-txt ul li span.tit{
+        width: 100%;
+    }
+
+    .prdtdetai{
+        margin-bottom: 100px;
+    }
+
+    .prdtdetai p.txt{
+        font-size: 40px;
+        line-height: 50px;
+        max-width: 600px;
+    }
+
+    .prdtdetai .box{
+        gap: 80px;
+    }
+
+
+}
+
+@media (max-width: 640px){
+
+    .detail-info{
+        margin-bottom: 60px;
+        padding: 0 10px;
+        
+    }
+
+    .detail-info .title{
+        font-size: 70px;
+        line-height: 84px;
+    }
+
+    .detail-info .bottom ul{
+        flex-direction: column; 
+        gap: 4px;
+        margin-bottom: 26px;
+    }
+
+    .detail-info .bottom ul li{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .detail-info .bottom ul li p{
+        font-size: 14px;
+    }
+
+    .detail-info .bottom .price-wrap .top{
+        margin-bottom: 20px;
+    }
+
+    .detail-info .bottom .price-wrap button.submit{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .detail-description{
+        padding: 0 10px;
+        margin-bottom: 60px;
+        }
+
+    .detail-description .txt-wrap{
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 2px;
+    }
+
+    .detail-description .txt-wrap h4.left-tit{
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .detail-description .txt-wrap .right-txt p{
+        margin-bottom: 12px;
+    }
+
+    .detail-description .txt-wrap .right-txt .profile figure{
+        width: 22px;
+        height: 22px;
+    }
+
+    .detail-description .txt-wrap .right-txt .profile .name{
+        font-size: 14px;
+    }
+
+    .detail-description .txt-wrap .right-txt ul li{
+        padding: 10px 8px;
+    }
+
+    .detail-description .txt-wrap .right-txt ul li span{
+        font-size: 14px;
+    }
+
+    .detail-description .txt-wrap .right-txt .profile{
+        margin-top: 18px;
+    }
+
+    .prdtdetai{
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    .prdtdetai p.txt{
+        font-size: 26px;
+        line-height: 32px;
+        max-width: 100%;
+    }
+
+    .prdtdetai .box{
+        gap: 16px;
+    }
+
+}
+
+
+
+

@@ -1,0 +1,30 @@
+
+:root {
+  --font-primary: "Roboto", sans-serif;
+
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+
+  --color-text-primary: #222;
+  --color-text-seconddary: #767676;
+  --color-text-tertiary: #999;
+  --color-line: #D7D7D7;
+  --color-bg: #f7f8f9;
+}
+
+
+.cursor__circle {
+        width: 25px;
+        height: 25px;
+        margin-top: -20%;
+        margin-left: -20%;
+        border-radius: 50%;
+        border: solid 1px #614332;
+        background-color: #614332;
+        transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1), margin 0.3s;
+}
+
+.swiper{
+  z-index: 0 !important;
+}
