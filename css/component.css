@@ -53,6 +53,7 @@ section{
     align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: 32px;
+    gap: 20px;
 }
 
 .section-txt h2{
@@ -115,12 +116,17 @@ section{
 
     .section-txt{
         margin-bottom: 30px;
+        gap: 0;
     }
 
     .section-txt h2{
         font-size: 34px;
         line-height: 42px;
         margin-bottom: 8px;
+    }
+
+    .section-txt .left{
+        max-width: 100%;
     }
 
     .section-txt .left a.link{
@@ -185,8 +191,8 @@ section{
 
 .info h4{
     font-family: var(--font-primary);
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 28px;
     font-weight: var(--medium);
     color: var(--color-text-primary, #222);
     margin-bottom: 16px;
@@ -247,9 +253,7 @@ section{
 @media (max-width: 640px){
 
     .info h4{
-        font-size: 15px;
-        line-height: 23px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
 }
@@ -448,17 +452,12 @@ ul.tab-menu li .rt-wrap:hover .rt-v2{
 
     ul.tab-menu{
         flex-wrap: wrap;
-        gap: 8px 14px;
+        gap: 10px 16px;
         margin-bottom: 14px;
     }
 
     ul.tab-menu li .rt-wrap{
         height: 18px;
-    }
-
-    ul.tab-menu li .rt-wrap a{
-        font-size: 14px;
-        line-height: 22px;
     }
 
 }

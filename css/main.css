@@ -87,6 +87,10 @@
 
 @media (max-width: 1024px){
 
+        .main-visual {
+            margin-bottom: 100px;
+        }
+
         .main-visual .main-txt{
             font-size: 70px;
             line-height: 84px;
@@ -107,6 +111,11 @@
 }
 
 @media (max-width: 640px){
+
+        .main-visual {
+            margin-bottom: 60px;
+        }
+
 
         .main-visual .main-txt{
             font-size: 42px;
@@ -253,6 +262,7 @@
     .category-btn-box .rt-wrap button {
         font-size: 30px;
         line-height: 38px;
+        width: fit-content;
     }
 
     .category-btn-box .rt-wrap{
@@ -284,21 +294,24 @@
     cursor: pointer;
 }
 
-.banner-inner .banner-list .swiper-wrapper .swiper-slide{
+.banner-inner .banner-list .swiper-slide{
     position: relative;
-} 
+    max-width: 726px;
+}
 
-.banner-inner .banner-list img{
+.banner-inner .banner-list .swiper-slide img{
     width: 100%;
     height: auto;
     will-change: transform;
 }
 
-.banner-inner .banner-list .content{
+.banner-inner .banner-list .swiper-slide .content{
     width: 100%;
+    max-width: 726px;
     height: 100%;
     background: var(--color-bg);
     position: absolute;
+    z-index: 10;
     left: 0;
     top: 0;
     opacity: 0;
@@ -396,6 +409,16 @@
     .banner-inner{
         margin-bottom: 140px;
         padding: 0 10px;
+    }
+
+    .banner-inner .banner-list .content .txt{
+        padding: 16px;
+    }
+
+    .banner-inner .banner-list .content .txt span{
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 8px;
     }
 
     .banner-inner .section-txt{
@@ -749,7 +772,6 @@
 
 /* ------------------------------txt-banner--------------------------------------------- */
 
-
 .video {
     position: relative;
     width: 100%;
@@ -781,6 +803,8 @@
     opacity: 0.3;
     cursor: pointer;
     padding-top: 14px;
+    transition: opacity 0.3s ease;
+    flex-shrink: 0; /* 추가 */
 }
 
 .video .video-list .video-pagination .menu-btn button{
@@ -797,7 +821,6 @@
 }
 
 @media (max-width: 1024px){
-
     .video {
         margin-bottom: 140px;
     }
@@ -816,10 +839,9 @@
         font-size: 15px;
         line-height: 24px;
     }
-
 }
-@media (max-width: 640px){
 
+@media (max-width: 640px){
     .video {
         margin-bottom: 100px;
     }
@@ -828,15 +850,29 @@
         min-width: 680px;
     }
 
-
     .video .video-list .video-pagination{
         bottom: 20px;
         gap: 16px;
+        justify-content: flex-start; /* 추가 */
+        overflow-x: auto; /* 추가 */
+        overflow-y: hidden; /* 추가 */
+        scroll-snap-type: x mandatory; /* 추가 */
+        -webkit-overflow-scrolling: touch; /* 추가 */
+        scrollbar-width: none; /* 추가 - Firefox */
+        -ms-overflow-style: none; /* 추가 - IE/Edge */
+        padding: 0 20px; /* 추가 */
+    }
+
+    /* 스크롤바 숨기기 - Webkit */
+    .video .video-list .video-pagination::-webkit-scrollbar {
+        display: none;
     }
 
     .video .video-list .video-pagination .menu-btn{
-        width: 100%;
+        width: calc(100% - 40px); /* 수정 */
+        min-width: calc(100% - 40px); /* 추가 */
         padding-top: 6px;
+        scroll-snap-align: start; /* 추가 */
     }
 
     .video .video-list .video-pagination .menu-btn button{
@@ -852,7 +888,7 @@
 ul.themes-list{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 36px 24px;
 }
 
 ul.themes-list > li{
@@ -860,7 +896,7 @@ ul.themes-list > li{
 }
 
 ul.themes-list li figure{
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     position: relative;
 }
 
@@ -876,7 +912,8 @@ ul.themes-list li figure img.logo{
     translate:-50% -50%;
     opacity: 0;
     transition: all 0.5s ease-in-out;
-    max-width: 100%;
+    max-width: 60%;
+    width: 100%;
     height: auto;
 }
 
@@ -919,12 +956,12 @@ ul.themes-list li:hover figure::before{
 
     ul.themes-list{
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 28px;
     }
 
 
     ul.themes-list li figure{
-        margin-bottom: 6px;
+        margin-bottom: 8px;
     }
 
 }
@@ -1153,14 +1190,23 @@ ul.journal-list li:hover .hidden-img{
 
 .other-product-list .other-list .slide-fixed p.btn-wrap{
     border: 1px solid var(--color-line);
-    padding: 4px 6px;
+    padding: 7px 10px;
+    display: flex;
+    gap: 14px;
 }
 
 .other-product-list .other-list .slide-fixed p.btn-wrap button{
     cursor: pointer;
     display: inline-block;
+    padding: 0;
+    margin: 0;
+    height: 24px;
 }
 
+.other-product-list .other-list .slide-fixed p.btn-wrap button img{
+    width: 24px;
+    height: 24px;
+}
 
 @media (max-width: 1024px){
 
@@ -1187,11 +1233,14 @@ ul.journal-list li:hover .hidden-img{
     }
 
     .other-product-list .other-list .slide-fixed p.btn-wrap{
-        padding: 2px 4px;
+        padding: 5px 8px;
+        display: flex;
+        gap: 10px;
+        height: 20px;
     }
 
     .other-product-list .other-list .slide-fixed p.btn-wrap button img{
-        width: 18px;
+        width: 20px;
         height: 20px;
     }
 
@@ -1225,15 +1274,6 @@ ul.journal-list li:hover .hidden-img{
 
     .other-product-list .other-list .slide-fixed .txt{
         display: none;
-    }
-
-    .other-product-list .other-list .slide-fixed p.btn-wrap{
-        padding: 2px 4px;
-    }
-
-    .other-product-list .other-list .slide-fixed p.btn-wrap button img{
-        width: 16px;
-        height: 18px;
     }
 
 }

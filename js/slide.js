@@ -49,62 +49,38 @@ const newProduct = new Swiper(".product-filter-list", {
   },
 });
 
-const banner = new Swiper(".banner-list", {
-  loop: true,
-  slidesPerView: 2,
-  spaceBetween: 24,
-  // speed: 6e3,
-  freemode: true,
-  // autoplay: {
-  //   delay: 1,
-  //   disableOnInteraction: false,
-  // },
-});
+// -------------------- 제품 필터링 ----------------------
+
 
 
 const viedoBanner = new Swiper(".video-list", {
-  loop:true,
+  slidesPerView: 1,
+  loop: true,
   speed: 3000,
   parallax: true,
   autoplay: {
     delay: 1,
     disableOnInteraction: false,
-  },
-  pagination:{
-    el:'.pagination',
-    clickable: true,
-    bulletClass: 'bullet',
-    bulletActiveClass: 'is-active',
-    renderBullet:function(index,className){
-      return /* html */ `
-        <span class="${className}">
-          <img src="./assets/part01/${data[index].src}" alt="" />
-        </span>
-      `
-    }
-  },
-
+  }
 });
 
-const videoBtns = document.querySelectorAll('.video-pagination .menu-btn');
-videoBtns.forEach((btn, idx) => {
+// 커스텀 페이지네이션 연결
+const menuButtons = document.querySelectorAll('.video-pagination .menu-btn');
+
+menuButtons.forEach((btn, index) => {
   btn.addEventListener('click', () => {
-    viedoBanner.slideToLoop(idx);
-    updateMenuActive(idx);
+    viedoBanner.slideToLoop(index);
   });
 });
 
-function updateMenuActive(activeIdx) {
-  videoBtns.forEach((btn, idx) => {
-    btn.classList.toggle('on', idx === activeIdx);
-  });
-}
-
-// Swiper가 슬라이드 변경 시 active 버튼 갱신
+// 슬라이드 변경 시 active 상태 업데이트
 viedoBanner.on('slideChange', () => {
-  updateMenuActive(viedoBanner.realIndex);
+  menuButtons.forEach(btn => btn.classList.remove('on'));
+  menuButtons[viedoBanner.realIndex].classList.add('on');
 });
 
+
+// ------------------- 비디오 리스트 -----------------
 
 const otherProduct = new Swiper(".other-list", {
   loop: true,
@@ -152,25 +128,22 @@ const detailProduct = new Swiper(".detail-list", {
 });
 
 const bannerInner = new Swiper(".banner-list", {
-  loop: true,
-  speed: 1000,
   slidesPerView: 1,
-  spaceBetween: 0,
-  slidesPerGroup: 1,
-  freeMode: false,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
   breakpoints: {
     640: {
       slidesPerView: 1.5,
       spaceBetween: 16,
     },
     1024: {
-      slidesPerView: 2.5,
+      slidesPerView: "auto",
       spaceBetween: 24,
-    },
+      loop: true,
+      speed: 1000,
+      autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+      },
+        },
   },
 
 });

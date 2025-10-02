@@ -19,6 +19,10 @@ header h1.logo img {
     width: 168px;
 }
 
+header img.type-B{
+    display: none;
+}
+
 nav ul {
     display: flex;
     gap: 16px;
@@ -60,6 +64,7 @@ header button img{
     width: 30px;
 }
 
+
 /* ------------------header-------------------------- */
 
 
@@ -87,6 +92,14 @@ header.active nav ul li::before {
 
 header.type-B {
     position: relative;
+}
+
+header.type-B img.type-B{
+    display: block;
+}
+
+header.type-B img.type-A{
+    display: none;
 }
 
 header.type-B nav ul li {
