@@ -256,13 +256,15 @@
     .product-filter .category-btn-box{
         max-width: 100%;
         margin-bottom: 20px;
-        gap: 2px 4px;
+        gap: 2px 8px;
     }
 
     .category-btn-box .rt-wrap button {
-        font-size: 30px;
-        line-height: 38px;
+        font-size: 24px;
+        line-height: 34px;
         width: fit-content;
+        padding: 0;
+        margin: 0;
     }
 
     .category-btn-box .rt-wrap{
@@ -297,6 +299,7 @@
 .banner-inner .banner-list .swiper-slide{
     position: relative;
     max-width: 726px;
+    min-width: 380px;
 }
 
 .banner-inner .banner-list .swiper-slide img{
@@ -451,6 +454,11 @@
     transition: all 0.5s ease;
 } 
 
+.gallery .gallery-list figure img.bg-img{
+    max-width: 100%;
+    height: auto;
+}
+
 .gallery .gallery-list figure .tn-atom {
     width: 360px;
     padding: 24px 0;
@@ -466,19 +474,19 @@
 }
 
 .gallery .gallery-list figure .tn-atom.first{
-    top: 27%;
+    top: 28.3%;
 }
 
 .gallery .gallery-list figure .tn-atom.second{
-    top: 32%;
+    top: 32.9%;
 }
 
 .gallery .gallery-list figure .tn-atom.third{
-    top: 31.2%;
+    top: 32.2%;
 }
 
 .gallery .gallery-list figure .tn-atom.fourth{
-    top: 24.2%;
+    top: 25.5%;
 }
 
 .gallery .gallery-list figure .tn-atom .atom-txt{
@@ -520,9 +528,6 @@
     align-items: center;
 }
 
-.gallery .gallery-list figure .gallery-product img{
-    width: 80%;
-}
 
 .gallery .gallery-list figure .gallery-product .atom-txt{
     flex-direction: column;
@@ -543,8 +548,15 @@
 }
 
 .gallery .gallery-list figure .gallery-product .buy{
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: var(--regular);
     color: var(--color-text-seconddary);
+    transition: all 0.5s ease;
+}
+
+.gallery .gallery-list figure .gallery-product .buy:hover{
+    color: var(--color-text-primary);
 }
 
 .gallery .gallery-list figure .gallery-product .buy svg{
@@ -559,9 +571,10 @@
 }
 
 
-.gallery .gallery-list figure img{
-    width: 100%;
+.gallery .gallery-list figure img.item{
+    max-width: 100%;
     height: auto;
+    padding: 30px 0;
 }
 
 .gallery .left{
@@ -589,25 +602,29 @@
         margin-bottom: 8px;
     } 
 
+    .gallery .gallery-list figure img.item{
+        padding: 16px 0;
+    }
+
     .gallery .gallery-list figure .tn-atom {
-        width: 90%;
+        width: 80%;
         padding: 16px 0;
     }
 
     .gallery .gallery-list figure .tn-atom.first{
-        top: 18.5%;
+        top: 20.6%;
     }
 
     .gallery .gallery-list figure .tn-atom.second{
-        top: 18.9%;
+        top: 21%;
     }
 
     .gallery .gallery-list figure .tn-atom.third{
-        top: 17%;
+        top: 19.7%;
     }
 
     .gallery .gallery-list figure .tn-atom.fourth{
-        top: 13.8%;
+        top: 17.2%;
     }
 
     .gallery .gallery-list figure .tn-atom .sub-title{
@@ -616,14 +633,6 @@
 
     .gallery .gallery-list figure .tn-atom .name{
         margin-right: 14px;
-    }
-
-    .gallery .gallery-list figure .gallery-product {
-        width: 90%;
-    }
-
-    .gallery .gallery-list figure .gallery-product img{
-        width: 80%;
     }
 
     .gallery .gallery-list figure .gallery-product .atom-txt{
@@ -662,19 +671,19 @@
     }
 
     .gallery .gallery-list figure .tn-atom.first{
-        top: 18.5%;
+        top: 26%;
     }
 
     .gallery .gallery-list figure .tn-atom.second{
-        top: 18.5%;
+        top: 26.3%;
     }
 
     .gallery .gallery-list figure .tn-atom.third{
-        top: 18.5%;
+        top: 25.2%;
     }
 
     .gallery .gallery-list figure .tn-atom.fourth{
-        top: 18.5%;
+        top: 23%;
     }
 
     .gallery .gallery-list figure .gallery-product .atom-txt .name{

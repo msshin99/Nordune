@@ -283,7 +283,7 @@ section{
 }
 
 .swiper-slide img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -466,6 +466,7 @@ ul.tab-menu li .rt-wrap:hover .rt-v2{
 .product-list .item{
     position: relative;
     cursor: pointer;
+    aspect-ratio: 3 / 4;
 }
 
 .product-list .item span{
@@ -478,9 +479,12 @@ ul.tab-menu li .rt-wrap:hover .rt-v2{
 
 .product-list .item img{
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    aspect-ratio: 3 / 4;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate:-50% -50%;
 }
 
 .product-list .item span.name{

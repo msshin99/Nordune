@@ -56,6 +56,10 @@ header ul.menu-btn {
     margin-right: 72px;
 }
 
+header ul.menu-btn li:last-child{
+    display: none;
+}
+
 header button {
     cursor: pointer;
 }
@@ -328,6 +332,13 @@ footer .txt-banner .txt {
         width: 24px;
     }
 
+    header ul.menu-btn li {
+        display: none;
+    }
+
+    header ul.menu-btn li:last-child{
+        display: block;
+    }
 
     nav ul li { 
         font-size: 15px; 
