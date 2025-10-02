@@ -516,7 +516,7 @@ ul.tab-menu li .rt-wrap:hover .rt-v2{
 }
 
 .sub-container .product-list li img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 

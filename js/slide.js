@@ -129,6 +129,12 @@ const detailProduct = new Swiper(".detail-list", {
 
 const bannerInner = new Swiper(".banner-list", {
   slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  autoplay: {
+  delay: 4000,
+  disableOnInteraction: false,
+  },
   breakpoints: {
     640: {
       slidesPerView: 1.5,
