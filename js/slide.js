@@ -137,7 +137,7 @@ const bannerInner = new Swiper(".banner-list", {
   },
   breakpoints: {
     640: {
-      slidesPerView: 1.5,
+      slidesPerView: 1,
       spaceBetween: 16,
     },
     1024: {

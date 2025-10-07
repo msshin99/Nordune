@@ -62,13 +62,21 @@ article .titwrap button{
     font-size: 14px;
     font-weight: var(--regular);
     color: var(--color-text-secondary, #767676);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
     cursor: pointer;
+}
+
+article .titwrap button svg path{
+   transition: all 0.5s ease-in-out; 
 }
 
 article .titwrap button:hover{
     background: var(--color-text-primary);
     color: #fff;
+}
+
+article .titwrap button:hover svg path {
+  stroke: #fff;
 }
 
 article .conwrap figure{
@@ -122,6 +130,13 @@ article .btnwrap a{
     font-size: 14px;
     font-weight: var(--medium);
     color: #fff;
+    border: 1px solid var(--color-text-primary);
+    transition: all 0.3s ease-in-out;
+}
+
+article .btnwrap a:hover{
+    color: var(--color-text-primary);
+    background: #fff;
 }
 
 

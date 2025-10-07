@@ -414,6 +414,10 @@
         padding: 0 10px;
     }
 
+    .banner-inner .banner-list .swiper-slide{
+        min-width: 0;
+    }
+
     .banner-inner .banner-list .content .txt{
         padding: 16px;
     }
@@ -859,34 +863,18 @@
         min-width: 680px;
     }
 
-    .video .video-list .video-pagination{
-        bottom: 20px;
-        gap: 16px;
-        justify-content: flex-start; /* 추가 */
-        overflow-x: auto; /* 추가 */
-        overflow-y: hidden; /* 추가 */
-        scroll-snap-type: x mandatory; /* 추가 */
-        -webkit-overflow-scrolling: touch; /* 추가 */
-        scrollbar-width: none; /* 추가 - Firefox */
-        -ms-overflow-style: none; /* 추가 - IE/Edge */
-        padding: 0 20px; /* 추가 */
-    }
-
-    /* 스크롤바 숨기기 - Webkit */
-    .video .video-list .video-pagination::-webkit-scrollbar {
-        display: none;
-    }
-
     .video .video-list .video-pagination .menu-btn{
-        width: calc(100% - 40px); /* 수정 */
-        min-width: calc(100% - 40px); /* 추가 */
-        padding-top: 6px;
-        scroll-snap-align: start; /* 추가 */
+        width: calc(100% / 4 - 12px);
+    }
+
+    .video .video-list .video-pagination{
+        gap: 10px;
+        bottom: 14px;
     }
 
     .video .video-list .video-pagination .menu-btn button{
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 13px;
+        line-height: 20px;
     }
 }
 

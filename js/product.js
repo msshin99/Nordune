@@ -130,6 +130,27 @@ const products = [
     }
 ];
 
+// 페이지 타입 감지
+function isSubPage() {
+    return document.querySelector('.tab-menu') !== null;
+}
+
+// 이미지 경로 변환 함수
+function getImagePath(imagePath) {
+    if (isSubPage()) {
+        return '../' + imagePath;
+    }
+    return imagePath;
+}
+
+// 배경 이미지 경로 변환 함수
+function getBgImagePath(bgPath) {
+    if (isSubPage()) {
+        return '../' + bgPath;
+    }
+    return bgPath;
+}
+
 // Swiper 인스턴스 저장
 let newProduct = null;
 
@@ -152,9 +173,9 @@ function renderProducts(filter = 'ALL') {
 
     // HTML 생성
     const productsHTML = filteredProducts.map(product => `
-        <div class="swiper-slide item" style="background: #f7f8f9 url('img/product/276x360-bg.png') no-repeat center center">
+        <div class="swiper-slide item" style="background: #f7f8f9 url('${getBgImagePath('img/product/276x360-bg.png')}') no-repeat center center" onclick="location.href='product/detail.html'">
             <span class="name">${product.name}</span>
-            <img src="${product.image}" alt="${product.name}">
+            <img src="${getImagePath(product.image)}" alt="${product.name}">
             <span class="price">${product.price}</span>
         </div>
     `).join('');
@@ -273,9 +294,9 @@ function renderSubProducts(category = 'all') {
     const productsHTML = filteredProducts.map(product => {
         const objectFit = product.category === 'chair' || product.category === 'table' ? 'style="object-fit: contain;"' : '';
         return `
-            <li class="item" style="background: #f7f8f9 url('img/product/276x360-bg.png') no-repeat center center">
+            <li class="item" style="background: #f7f8f9 url('${getBgImagePath('img/product/276x360-bg.png')}') no-repeat center center">
                 <span class="name">${product.name}</span>
-                <img src="${product.image}" alt="${product.name}" ${objectFit}>
+                <img src="${getImagePath(product.image)}" alt="${product.name}" ${objectFit}>
                 <span class="price">${product.price}</span>
             </li>
         `;
@@ -300,9 +321,9 @@ function renderCategoryProducts(category, containerIndex) {
     const productsHTML = categoryProducts.map(product => {
         const objectFit = category === 'chair' || category === 'table' ? 'style="object-fit: contain;"' : '';
         return `
-            <div class="swiper-slide item" style="background: #f7f8f9 url('img/product/426x520-bg.png') no-repeat center center">
+            <div class="swiper-slide item" style="background: #f7f8f9 url('${getBgImagePath('img/product/426x520-bg.png')}') no-repeat center center">
                 <span class="name">${product.name}</span>
-                <img src="${product.image}" alt="${product.name}" ${objectFit}>
+                <img src="${getImagePath(product.image)}" alt="${product.name}" ${objectFit}>
                 <span class="price">${product.price}</span>
             </div>
         `;
@@ -401,10 +422,10 @@ function initTabMenu() {
 
 // 페이지 타입 감지 및 초기화
 function initPage() {
-    const isSubPage = document.querySelector('.tab-menu') !== null;
+    const isSubPageCheck = document.querySelector('.tab-menu') !== null;
     const isIndexPage = document.querySelector('.other-product-list') !== null;
     
-    if (isSubPage) {
+    if (isSubPageCheck) {
         // sub.html 초기화
         renderSubProducts('all');
         initTabMenu();
