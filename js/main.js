@@ -54,3 +54,35 @@ minusBtn.addEventListener('click', function(){
 
     quantity.value = current;
 });
+
+
+
+  // 모든 li 요소 선택
+        const tabItems = document.querySelectorAll('.tab-menu li');
+        
+        // 각 li에 클릭 이벤트 추가
+        tabItems.forEach(item => {
+            const rtWrap = item.querySelector('.rt-wrap');
+            
+            rtWrap.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 모든 li에서 active 클래스 제거
+                tabItems.forEach(tab => {
+                    tab.classList.remove('active');
+                    // 모든 rt-v1 링크에서 on 클래스 제거
+                    const rtV1 = tab.querySelector('.rt-v1');
+                    if (rtV1) {
+                        rtV1.classList.remove('on');
+                    }
+                });
+                
+                // 클릭된 li에 active 클래스 추가
+                item.classList.add('active');
+                // 클릭된 li의 rt-v1 링크에 on 클래스 추가
+                const clickedRtV1 = item.querySelector('.rt-v1');
+                if (clickedRtV1) {
+                    clickedRtV1.classList.add('on');
+                }
+            });
+        });

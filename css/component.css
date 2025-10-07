@@ -387,48 +387,54 @@ section{
 /* --------------------------------- tab menu --------------------------------------- */
 
 
-ul.tab-menu{
-    display: flex;
-    gap: 18px;
-    margin-bottom: 24px;
-}
+        ul.tab-menu {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 24px;
+            list-style: none;
+            padding: 0;
+        }
 
-ul.tab-menu li{
-    display: flex;
-    justify-content: center;
-    align-items: center;      
-}
+        ul.tab-menu li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-ul.tab-menu li .rt-wrap{
-    height: 26px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
+        ul.tab-menu li .rt-wrap {
+            height: 26px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
 
-ul.tab-menu li .rt-wrap a{
-    font-family: var(--font-primary);
-    font-size: 18px;
-    font-weight: var(--medium);
-    line-height: 26px;
-    color: var(--color-text-tertiary);
-    transition: transform 0.5s ease;
-}
+        ul.tab-menu li .rt-wrap a {
+            font-family: var(--font-primary);
+            font-size: 18px;
+            font-weight: var(--medium);
+            line-height: 26px;
+            color: var(--color-text-tertiary);
+            transition: transform 0.5s ease;
+            text-decoration: none;
+        }
 
-ul.tab-menu li .rt-wrap a.on{
-    color: var(--color-text-primary);
-}
+        ul.tab-menu li .rt-wrap a.on {
+            color: var(--color-text-primary);
+        }
 
+        ul.tab-menu li .rt-wrap:hover .rt-v1 {
+            transform: translateY(-100%);
+        }
 
-ul.tab-menu li .rt-wrap:hover .rt-v1{
-    transform: translateY(-100%);
-}
+        ul.tab-menu li .rt-wrap:hover .rt-v2 {
+            transform: translateY(-100%);
+            color: var(--color-text-primary);
+        }
 
-ul.tab-menu li .rt-wrap:hover .rt-v2{
-    transform: translateY(-100%);
-    color: var(--color-text-primary);
-}        
+        ul.tab-menu li.active .rt-wrap a.rt-v1 {
+            color: var(--color-text-primary);
+        }     
 
 @media (max-width: 1024px){
 
