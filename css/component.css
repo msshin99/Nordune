@@ -20,7 +20,7 @@ section{
 
     section{
         margin-bottom: 140px;
-        padding: 0 18px;
+        padding: 0 40px;
     }
 
     .sub-container{
@@ -35,11 +35,11 @@ section{
 
     section{
         margin-bottom: 100px;
-        padding: 0 10px;
+        padding: 0 20px;
     }
 
     .sub-container{
-        padding: 0 10px;
+        padding: 0 20px;
         margin-bottom: 120px;
 
     }
@@ -336,7 +336,7 @@ section{
 @media (max-width: 1024px){
 
     .page-head-wrap{
-        padding: 60px 18px;
+        padding: 60px 40px;
     }
 
 
@@ -361,7 +361,7 @@ section{
 @media (max-width: 640px){
 
     .page-head-wrap{
-        padding: 40px 10px;
+        padding: 40px 20px;
     }
 
     .page-head-wrap .title h2{

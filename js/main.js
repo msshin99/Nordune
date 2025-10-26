@@ -86,3 +86,21 @@ minusBtn.addEventListener('click', function(){
                 }
             });
         });
+
+
+
+
+
+
+// 메뉴 버튼 클릭 시 모바일 네비 열기
+const menuBtn = document.querySelector('.menu-open-btn');
+const mobileNav = document.querySelector('.mobile-nav');
+const closeBtn = document.querySelector('.close-btn');
+
+menuBtn.addEventListener('click', () => {
+  mobileNav.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  mobileNav.style.display = 'none';
+});

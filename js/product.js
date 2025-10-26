@@ -2,7 +2,7 @@
 const products = [
     {
         id: 1,
-        name: '[Sharp oblong 1800]',
+        name: 'The Quiet Form',
         image: 'img/product/chair/img-01.png',
         price: '￦150,000',
         category: 'chair',
@@ -10,124 +10,263 @@ const products = [
     },
     {
         id: 2,
-        name: '[Sharp oblong 1800]',
+        name: 'Arcane Seat',
         image: 'img/product/chair/img-02.png',
-        price: '￦150,000',
+        price: '￦120,000',
         category: 'chair',
-        tags: ['BESTSELLER']
+        tags: ['NEW', 'FEATURED']
     },
     {
         id: 3,
-        name: '[Sharp oblong 1800]',
-        image: 'img/product/chair/img-03.png',
-        price: '￦150,000',
-        category: 'chair',
-        tags: ['NEW', 'TRENDING']
+        name: 'Arcane Seat',
+        image: 'img/product/sofa/img-02.png',
+        price: '￦320,000',
+        category: 'sofa',
+        tags: ['BESTSELLER']
     },
     {
         id: 4,
-        name: '[Sharp oblong 1800]',
-        image: 'img/product/chair/img-04.png',
-        price: '￦150,000',
-        category: 'chair',
+        name: 'Cloudtone',
+        image: 'img/product/table/img-06.png',
+        price: '￦200,000',
+        category: 'table',
         tags: ['LIMITED']
     },
     {
         id: 5,
-        name: '[Sharp oblong 1800]',
+        name: 'Cloudtone',
         image: 'img/product/chair/img-05.png',
-        price: '￦150,000',
+        price: '￦200,000',
         category: 'chair',
-        tags: ['FEATURED']
+        tags: ['LIMITED']
     },
     {
         id: 6,
-        name: '[Sharp oblong 1800]',
-        image: 'img/product/table/img-01.png',
-        price: '￦150,000',
+        name: 'Still Beam',
+        image: 'img/product/props/img-06.png',
+        price: '￦60,000',
+        category: 'props',
+        tags: ['TRENDING']
+    },
+
+    // ------------------------------
+    {
+        id: 7,
+        name: 'Whisper Curve',
+        image: 'img/product/chair/img-03.png',
+        price: '￦62,000',
+        category: 'chair',
+        tags: ['NEW', 'LIMITED']
+    },
+    {
+        id: 8,
+        name: 'Still Frame',
+        image: 'img/product/chair/img-04.png',
+        price: '￦90,000',
+        category: 'chair',
+        tags: ['TRENDING', 'FEATURED']
+    },
+    {
+        id: 9,
+        name: 'Lune Chair',
+        image: 'img/product/chair/img-05.png',
+        price: '￦100,000',
+        category: 'chair',
+        tags: ['BESTSELLER', 'FEATURED']
+    },
+    {
+        id: 10,
+        name: 'Fold of Light',
+        image: 'img/product/chair/img-06.png',
+        price: '￦260,000',
+        category: 'chair',
+        tags: ['NEW', 'BESTSELLER']
+    },
+    {
+        id: 11,
+        name: 'Serene Edge',
+        image: 'img/product/chair/img-07.png',
+        price: '￦200,000',
+        category: 'chair',
+        tags: ['LIMITED', 'FEATURED']
+    },
+    {
+        id: 12,
+        name: 'Silhouette Chair',
+        image: 'img/product/chair/img-08.png',
+        price: '￦320,000',
+        category: 'chair',
+        tags: ['NEW', 'TRENDING']
+    },
+    
+    // -------------------
+
+    {
+        id: 13,
+        name: 'Stillwood',
+        image: 'img/product/table/img-02.png',
+        price: '￦320,000',
+        category: 'table',
+        tags: ['LIMITED', 'FEATURED']
+    },
+    {
+        id: 14,
+        name: 'Surface 11',
+        image: 'img/product/table/img-03.png',
+        price: '￦320,000',
         category: 'table',
         tags: ['BESTSELLER', 'FEATURED']
     },
     {
-        id: 7,
-        name: '[Sharp oblong 1800]',
-        image: 'img/product/table/img-02.png',
-        price: '￦150,000',
-        category: 'table',
-        tags: ['NEW']
-    },
-    {
-        id: 8,
-        name: '[Sharp oblong 1800]',
-        image: 'img/product/table/img-03.png',
-        price: '￦150,000',
-        category: 'table',
-        tags: ['TRENDING', 'LIMITED']
-    },
-    {
-        id: 9,
-        name: '[Sharp oblong 1800]',
+        id: 15,
+        name: 'Atelier Form',
         image: 'img/product/table/img-04.png',
-        price: '￦150,000',
+        price: '￦320,000',
         category: 'table',
         tags: ['NEW', 'BESTSELLER']
     },
     {
-        id: 10,
-        name: '[Sharp oblong 1800]',
+        id: 16,
+        name: 'Calm Ground',
         image: 'img/product/table/img-05.png',
-        price: '￦150,000',
+        price: '￦320,000',
         category: 'table',
-        tags: ['FEATURED']
+        tags: ['FEATURED', 'TRENDING']
     },
     {
-        id: 11,
-        name: '[Sharp oblong 1800]',
+        id: 17,
+        name: 'Grain',
+        image: 'img/product/table/img-06.png',
+        price: '￦320,000',
+        category: 'table',
+        tags: ['NEW', 'LIMITED']
+    },
+    {
+        id: 18,
+        name: 'Stoneframe',
+        image: 'img/product/table/img-07.png',
+        price: '￦320,000',
+        category: 'table',
+        tags: ['LIMITED', 'TRENDING']
+    },
+    {
+        id: 19,
+        name: 'Memento',
+        image: 'img/product/table/img-08.png',
+        price: '￦320,000',
+        category: 'table',
+        tags: ['BESTSELLER', 'TRENDING']
+    },
+    {
+        id: 20,
+        name: 'Nør Table',
+        image: 'img/product/table/img-09.png',
+        price: '￦320,000',
+        category: 'table',
+        tags: ['LIMITED', 'TRENDING']
+    },
+
+    // ----------------------------
+    {
+        id: 21,
+        name: 'Embrace',
+        image: 'img/product/sofa/img-02.png',
+        price: '￦120,000',
+        category: 'sofa',
+        tags: ['BESTSELLER', 'TRENDING']
+    },
+    {
+        id: 22,
+        name: 'Nuvé',
+        image: 'img/product/sofa/img-03.png',
+        price: '￦380,000',
+        category: 'sofa',
+        tags: ['LIMITED', 'TRENDING']
+    },
+    {
+        id: 23,
+        name: 'Velvet Field',
+        image: 'img/product/sofa/img-04.png',
+        price: '￦360,000',
+        category: 'sofa',
+        tags: ['BESTSELLER', 'TRENDING']
+    },
+    {
+        id: 24,
+        name: 'Slowwave',
+        image: 'img/product/sofa/img-05.png',
+        price: '￦320,000',
+        category: 'sofa',
+        tags: ['NEW', 'TRENDING']
+    },
+    {
+        id: 25,
+        name: 'Haven',
+        image: 'img/product/sofa/img-06.png',
+        price: '￦340,000',
+        category: 'sofa',
+        tags: ['BESTSELLER', 'TRENDING']
+    },
+
+    // --------------------------
+
+    {
+        id: 30,
+        name: 'Mura',
         image: 'img/product/props/img-01.png',
-        price: '￦150,000',
+        price: '￦160,000',
         category: 'props',
         tags: ['NEW', 'TRENDING']
     },
     {
-        id: 12,
-        name: '[Sharp oblong 1800]',
+        id: 31,
+        name: 'Mura',
         image: 'img/product/props/img-02.png',
-        price: '￦150,000',
+        price: '￦180,000',
         category: 'props',
-        tags: ['LIMITED']
+        tags: ['NEW', 'TRENDING']
     },
     {
-        id: 13,
-        name: '[Sharp oblong 1800]',
+        id: 32,
+        name: 'Mura',
         image: 'img/product/props/img-03.png',
-        price: '￦150,000',
+        price: '￦120,000',
         category: 'props',
-        tags: ['BESTSELLER']
+        tags: ['NEW', 'TRENDING']
     },
     {
-        id: 14,
-        name: '[Sharp oblong 1800]',
+        id: 33,
+        name: 'Mura',
         image: 'img/product/props/img-04.png',
-        price: '￦150,000',
+        price: '￦92,000',
         category: 'props',
-        tags: ['NEW', 'FEATURED']
+        tags: ['NEW', 'TRENDING']
     },
     {
-        id: 15,
-        name: '[Sharp oblong 1800]',
+        id: 34,
+        name: 'Mura',
         image: 'img/product/props/img-05.png',
-        price: '￦150,000',
+        price: '￦32,000',
         category: 'props',
-        tags: ['TRENDING']
+        tags: ['NEW', 'TRENDING']
     },
     {
-        id: 16,
-        name: '[Sharp oblong 1800]',
+        id: 35,
+        name: 'Mura',
         image: 'img/product/props/img-06.png',
-        price: '￦150,000',
+        price: '￦40,000',
         category: 'props',
-        tags: ['LIMITED', 'FEATURED']
-    }
+        tags: ['NEW', 'TRENDING']
+    },
+    {
+        id: 36,
+        name: 'Mura',
+        image: 'img/product/props/img-07.png',
+        price: '￦200,000',
+        category: 'props',
+        tags: ['NEW', 'TRENDING']
+    },
+
 ];
 
 // 페이지 타입 감지
@@ -334,7 +473,7 @@ function renderCategoryProducts(category, containerIndex) {
 
 // index.html 모든 카테고리 상품 렌더링
 function renderAllProducts() {
-    const categories = ['chair', 'table', 'props'];
+    const categories = ['chair', 'table','sofa', 'props'];
     
     categories.forEach((category, index) => {
         renderCategoryProducts(category, index);
