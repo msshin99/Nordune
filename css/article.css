@@ -144,7 +144,7 @@ article .btnwrap a:hover{
 @media (max-width: 1024px){
     
     article{
-        padding: 60px 18px;
+        padding: 60px 40px;
     }
 
     article .titwrap h3{
@@ -204,7 +204,7 @@ article .btnwrap a:hover{
 @media (max-width: 640px){
 
     article{
-        padding: 40px 10px;
+        padding: 40px 20px;
     }
 
     article .titwrap h3{
