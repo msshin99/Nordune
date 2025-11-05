@@ -478,7 +478,7 @@
 .gallery{
     display: flex;
     justify-content: space-between;
-    gap: 60px;
+    gap: 140px;
 }
 
 .gallery .gallery-list{
@@ -494,6 +494,7 @@
 .gallery .gallery-list figure img.bg-img{
     max-width: 100%;
     height: auto;
+
 }
 
 .gallery .gallery-list figure .tn-atom {
@@ -505,7 +506,7 @@
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-radius: 16px;
+    border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.5s ease;
 }
@@ -557,7 +558,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
+    opacity: 0; 
     visibility: hidden;
     transition: all 0.5s ease-in-out;
     display: flex;
@@ -612,6 +613,7 @@
     max-width: 100%;
     height: auto;
     padding: 30px 0;
+    width: 200px;
 }
 
 .gallery .left{
@@ -632,7 +634,7 @@
 @media (max-width: 1024px){
 
     .gallery{
-        gap: 60px;
+        gap: 40px;
     }
 
     .gallery .gallery-list figure{
@@ -640,7 +642,8 @@
     } 
 
     .gallery .gallery-list figure img.item{
-        padding: 16px 0;
+        padding: 2px 0;
+        width: 140px;
     }
 
     .gallery .gallery-list figure .tn-atom {
@@ -706,6 +709,11 @@
     .gallery .gallery-list{
         width: 100%;
     }
+
+    .gallery .gallery-list figure img.item{
+        width: 180px;
+    }
+
 
     .gallery .gallery-list figure .tn-atom.first{
         top: 152px;
