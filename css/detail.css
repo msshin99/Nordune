@@ -483,6 +483,7 @@ input[type="text" i] {
     .prdtdetai{
         flex-direction: column;
         margin-bottom: 80px;
+        padding: 0 15px;
     }
 
     .prdtdetai p.txt{
