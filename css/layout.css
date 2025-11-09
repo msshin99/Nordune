@@ -53,6 +53,8 @@ nav ul li:hover::before {
 
 header ul.menu-btn {
     display: flex;
+    align-items: center;
+    gap: 12px;
     margin-right: 72px;
 }
 
@@ -62,6 +64,7 @@ header ul.menu-btn li:last-child{
 
 header button {
     cursor: pointer;
+    padding: 0;
 }
 
 header button img{
@@ -120,6 +123,238 @@ header.type-B h1.logo svg path {
 
 header.type-B ul.menu-btn svg path {
     stroke: var(--color-text-seconddary);
+}
+
+/* ---------------------------- mo- menu ------------------------ */
+
+header .mo-menu {
+  display: none;
+}
+
+header .mo-nav-open {
+  display: none;
+}
+
+header .mo-menu {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+  }
+
+  header .mo-menu::before,
+  header .mo-menu::after,
+  header .mo-menu span {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+
+  header.type-B .mo-menu::before,
+  header.type-B .mo-menu::after,
+  header.type-B .mo-menu span {
+    background-color: var(--color-text-primary);
+  }
+
+
+  header.sub .mo-menu::before,
+  header.sub .mo-menu::after,
+  header.sub .mo-menu span {
+    background-color: var(--sub-tertiary-txt);
+  }
+
+  /* 가운데 줄을 위한 span 태그 대신 가상 요소를 사용하지 않은 경우 */
+  header .mo-menu span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* 위쪽 줄 */
+  header .mo-menu::before {
+    top: 0;
+  }
+
+  /* 아래쪽 줄 */
+  header .mo-menu::after {
+    bottom: 0;
+  }
+
+  /* 'active' 클래스가 있을 때 X자 모양으로 변경 */
+  header .mo-menu.active::before {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); /* 45도 회전 */
+  }
+
+  header .mo-menu.active::after {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg); /* -45도 회전 */
+  }
+
+  /* 가운데 줄 숨김 */
+  header .mo-menu.active span {
+    opacity: 0;
+  }
+
+  /* 🌟🌟🌟 추가할 코드 🌟🌟🌟 */
+/* active 상태일 때 X자 모양의 색상을 #222로 변경 */
+header .mo-menu.active::before,
+header .mo-menu.active::after {
+    background-color: #222 !important; 
+}
+
+
+  @media (max-width: 1024px){
+
+    header { 
+        padding: 18px 0; 
+    }
+    header nav { 
+        display: none; 
+    }
+    header h1.logo { 
+        margin-left: 18px; 
+    }
+    header h1.logo svg { 
+        width: 130px; 
+    }
+    header ul.menu-btn { 
+        gap: 10px;
+        margin-right: 18px;
+    }
+
+    header ul.menu-btn li.mypage{
+        display: none;
+    }
+
+    header ul.menu-btn li button svg { 
+        width: 24px;
+    }
+    header ul.menu-btn li:last-child{
+        display: block;
+        padding-left: 4px;
+    }
+
+    nav ul li { 
+        font-size: 15px; 
+    }
+
+    header .mo-nav-open {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out;
+        display: block;
+        
+    }
+
+    body:has(header .mo-nav-open.is-open) {
+        overflow: hidden; 
+    }
+
+
+    header .mo-nav-open.is-open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    header .mo-nav-open ul{
+        position: absolute;
+        top: 0;
+        transform: translateY(50%);
+        left: 16px;
+    }
+
+    header .mo-nav-open ul li{
+        font-family: var(--font-primary);
+        font-size: 44px;
+        line-height: 52px;
+        font-weight: var(--medium);
+        color: var(--color-text-primary);
+        margin-bottom: 24px;
+        position: relative;
+        width: fit-content;
+    }
+
+    header .mo-nav-open ul li::before{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        background: var(--color-text-primary);
+        bottom: 0;
+        transition: width 0.5s ease;
+    }
+
+    header .mo-nav-open ul li:hover::before{
+        width: 100%;
+    }
+
+    header .mo-nav-open ul li:last-child{
+        margin-bottom: 0;
+    }
+
+    header .mo-nav-open .my-page-mo{
+        position: absolute;
+        bottom: 10%;
+        transform: translateY(50%);
+        left: 16px;
+    }
+
+    header .mo-nav-open .my-page-mo a{
+        font-family: var(--font-primary);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: var(--regular);
+        color: var(--color-text-seconddary);
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    header .mo-menu {
+        width: 26px;
+        height: 18px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    header { 
+        padding: 14px 0; 
+    }
+    header h1.logo { 
+        margin-left: 10px; 
+    }
+    header h1.logo img { 
+        width: 136px; 
+    }
+    header ul.menu-btn { 
+        gap: 8px;
+        margin-right: 10px;
+    }
+    nav ul li { 
+        font-size: 14px;
+        line-height: 22px; 
+    }
+
+
 }
 
 /* ------------------header.type-B-------------------------- */
@@ -312,37 +547,6 @@ footer .txt-banner .txt {
 /* ------------------footer-------------------------- */
 
 @media (max-width: 1024px) {
-    header { 
-        padding: 18px 0; 
-    }
-    header nav { 
-        display: none; 
-    }
-    header h1.logo { 
-        margin-left: 18px; 
-    }
-    header h1.logo svg { 
-        width: 130px; 
-    }
-    header ul.menu-btn { 
-        margin-right: 18px;
-    }
-
-    header ul.menu-btn li button svg { 
-        width: 24px;
-    }
-
-    header ul.menu-btn li {
-        display: none;
-    }
-
-    header ul.menu-btn li:last-child{
-        display: block;
-    }
-
-    nav ul li { 
-        font-size: 15px; 
-    }
 
     .search-bg{
         top: 69px;
@@ -406,22 +610,6 @@ footer .txt-banner .txt {
 
 
 @media (max-width: 640px) {
-    header { 
-        padding: 14px 0; 
-    }
-    header h1.logo { 
-        margin-left: 10px; 
-    }
-    header h1.logo img { 
-        width: 128px; 
-    }
-    header ul.menu-btn { 
-        margin-right: 10px;
-    }
-    nav ul li { 
-        font-size: 14px;
-        line-height: 22px; 
-    }
 
     .search-bg{
         width: 100%;
